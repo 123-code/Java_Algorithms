@@ -1,5 +1,8 @@
-package Java_UIs;
+//package Java_UIs;
 import javax.swing.JOptionPane;
+import java.util.*;  
+
+
 
 class Main{
     public static void main(String[] args) {
@@ -8,7 +11,8 @@ class Main{
 System.out.println(input);
 
         String name = JOptionPane.showInputDialog("Porfavor Digite su nombre:");
-        JOptionPane.showMessageDialog(null,"Bienvenid@!" + " " + name);
+        String apellido = JOptionPane.showInputDialog("Ingrese su apellido:");
+        JOptionPane.showMessageDialog(null,"Bienvenid@!" + " " + name + " " + apellido);
         
         JOptionPane.showInputDialog(null,name + " " + "Ingresa tu edad a la fecha:");
         
@@ -17,7 +21,9 @@ System.out.println(input);
       
 int inputed = 0;
 int cont = 1;
-double[] notas = new double[10];
+double[] notas = new double[ans];
+System.out.println(ans);
+
 
 do{
 int nota = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresa tu nota de semestre" + " " + cont + ":"));
@@ -30,18 +36,26 @@ cont++;
 
 JOptionPane.showInputDialog(null,"Describa en pocas palabras su rendimiento academico:");
 
-int arrayLength = notas.length;
+//int arrayLength = 0;
+
 
 double promedio = 0;
 double sumatoria = 0;
 
-for(int i=0;i<arrayLength;i++){
-sumatoria += notas[i];
-promedio = sumatoria/arrayLength;
-}
+sumatoria = Arrays.stream(notas).sum();
+
+promedio = sumatoria/notas.length;
 
 JOptionPane.showMessageDialog(null,"El promedio de sus notas es:" + promedio);
 
+if(promedio >= 6.0){
+    JOptionPane.showMessageDialog(null,"Felicidades, ha llegado a la nota minima requerida!");
+    String curso = JOptionPane.showInputDialog(null,"Ingrese el nombre del curso al que desea acceder:");
+    JOptionPane.showMessageDialog(null,"Gracias por aplicar ! al curso :" + " "  + curso + " " + ",su solicitud sera revisada.");
+}
+else if(promedio < 6.0){
+    JOptionPane.showMessageDialog(null,"Lo sentimos, su promedio no es el minimo necesario para aplicar :(");
+}
 
 
 
