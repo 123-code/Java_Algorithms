@@ -16,10 +16,6 @@ public class queue {
         return queue.remove(0);
     }
 
-    public Persona removeindex(int index) {
-        return queue.remove(index);
-    }
-
     public int size() {
         return queue.size();
     }
@@ -32,16 +28,5 @@ public class queue {
         return queue.get(i);
     }
 
-/*
-    String [] Nombre={};
-    public String values(){
-        
-        for(int i=0;i<queue.size();i++){
-            Nombre = queue.get(i).getNombre().toString();
-            Nombre[i] = Nombre;
-        }
-        return Nombre;
-    }
-  */
-  
+    
 }

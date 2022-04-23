@@ -1,28 +1,28 @@
 package RoundRobin;
 
 public class Persona {
-    private String nombre;
+    private String Nombre;
     private int edad;
 
-    public Persona(String nombre, int edad) {
-        this.nombre = nombre;
+    public Persona(String Nombre,int edad) {
+        this.Nombre = Nombre;
         this.edad = edad;
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
 
     public int getEdad() {
         return edad;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
 }
