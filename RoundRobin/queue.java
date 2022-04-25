@@ -28,5 +28,19 @@ public class queue {
         return queue.get(i);
     }
 
+    public void removeatindex(String dato){
+        for(int i=0;i<queue.size();i++){
+            if(queue.get(i).getNombre()==dato){
+                queue.remove(i);
+            }
+            else{
+                System.out.println("Not in Queue");
+            }
+            
+        }
+        
+    }
+    }
+
     
-}
+

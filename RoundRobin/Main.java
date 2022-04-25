@@ -8,10 +8,9 @@ public class Main {
         
 
 
-
+    queue cola = new queue();
     public void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        queue cola = new queue();
         int opc;
 
         do{
@@ -52,11 +51,26 @@ public class Main {
 
     }
 
-    public void RoundRobin(int qtm,int burst_time){
+    public void RoundRobin(int qtm,int burst_time,String dato) throws Exception{
         int elapsed = 0;
     
         do{
-           
+           for(int i=0;i<cola.size();i++){
+               if(burst_time<qtm){
+                   cola.removeatindex(dato);
+               }
+               else{
+                   do{
+                       elapsed += qtm;
+                       System.out.println("----Epoch:" + i + "----" );
+
+                   }while(elapsed != burst_time);
+
+                   cola.removeatindex(dato);
+
+
+               }
+           }
     
         }while(burst_time!=0);
     
