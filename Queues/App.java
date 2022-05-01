@@ -12,16 +12,22 @@ public class App {
         op = Integer.parseInt(scan.nextLine());
 switch(op){
 
-      Case 1:
+      case 1:
         String nombre = scan.nextLine();
         Persona persona = new Persona();
         persona.setNombre(nombre);
-
         int edad = Integer.parseInt(scan.nextLine());
         persona.setEdad(edad);
+        cola.Queuein(persona);
+        System.out.println(""+cola.toString());
         break;
         
-        Case 2:
+        case 2:
+        cola.Queueout();
+        System.out.println(""+cola.toString());
+        break;
+
+        case 3:
         
 }
             

@@ -1,7 +1,6 @@
 package RoundRobin;
 import java.util.Scanner;
-import RoundRobin.Persona;
-import RoundRobin.queue;
+
 
 
 public class Main {
@@ -27,6 +26,7 @@ public class Main {
                 int edad = scan.nextInt();
                 Persona p = new Persona(nombre, edad);
                 cola.add(p);
+                scan.close();
 
 
                 break;
@@ -50,9 +50,9 @@ public class Main {
         }while(opc != 4);
 
     }
-
+    int elapsed = 0;
     public void RoundRobin(int qtm,int burst_time,String dato) throws Exception{
-        int elapsed = 0;
+        
     
         do{
            for(int i=0;i<cola.size();i++){
@@ -70,7 +70,9 @@ public class Main {
 
 
                }
+               elapsed += burst_time;
            }
+           
     
         }while(burst_time!=0);
     

@@ -17,5 +17,13 @@ public String getNombre(){
   return this.Nombre;
 }
 
+  public void setEdad(int _edad){
+    this.edad = _edad;
+  }
+
+  public int getEdad(){
+    return this.edad;
+  }
+
     
 }
