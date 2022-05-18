@@ -1,5 +1,5 @@
 package Queues;
-import Queues.ArrayList.Queue;
+
 import java.util.Scanner;
 public class App {
     
