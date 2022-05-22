@@ -1,11 +1,15 @@
 package Queues;
-import Queues.ArrayList.Queue;
+
 import java.util.Scanner;
+
+
 public class App {
     
+  Scanner scan = new Scanner(System.in);
+  Queue cola = new Queue();
+
     public void main(String[] args) throws Exception {
-      Scanner scan = new Scanner(System.in);
-        Queue cola = new Queue();
+      
       int op;
       do{
         System.out.println("1 Ingresar Nombre 2. Eliminar persona 3. Salir");

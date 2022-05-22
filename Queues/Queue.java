@@ -1,8 +1,8 @@
-package Queues.ArrayList;
+package Queues;
 
 import java.util.ArrayList;
 
-import Queues.Persona;
+
 
 public class Queue {
     private ArrayList<Persona> personas;
