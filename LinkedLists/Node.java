@@ -1,8 +1,12 @@
-public class Node {
-    int dato;
-    Nodo siguiente;
-    public Nodo(int d){
-        dato = d;
-        siguiente = this;
+package LinkedLists;
+
+public class Node{
+    int data;
+    Node next;
+
+    public Node(int data){
+        this.data = data;
+        this.next = null;
+
     }
 }
