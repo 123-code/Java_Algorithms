@@ -1,4 +1,4 @@
-package javaapplication1;
+//package javaapplication1;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author cisco
  */
-public class Main {
+public class Factorial {
 
     /**
      * @param args the command line arguments

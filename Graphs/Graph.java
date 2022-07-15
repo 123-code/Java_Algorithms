@@ -1,8 +1,10 @@
+
 package Graphs;
+import java.util.ArrayList;
 public class Graph{
 
-    Node node = new Node();
-
+// list of nodes in the graph   
+ArrayList<Node> nodes = new ArrayList<Node>();
 public int matrix [][];
 
 public Graph(){
@@ -17,31 +19,42 @@ public Graph(){
 
     }
 
-    public void addconnection(int _vertices,int _edges){
-        // 1 means there is a connection between edges, 0 means there isnt a connection.
-matrix[_vertices][_edges] = 1;
 
-    }
 
     public void createnode(String name){
         Node node = new Node();
         node.SetName(name);
+        node.setconnected(false);
+        node.setconnectedto(null);
+        nodes.add(node);
+
+    }
+
+    public void addconnection(int _vertices,int _edges){
+        // 1 means there is a connection between edges, 0 means there isnt a connection.
+matrix[_vertices][_edges] = 1;
+for(int i=0;i<nodes.size();i++){
+    if(nodes.get(i).getName().equals(_vertices) && nodes.get(i).getName().equals(_edges)){
+        nodes.get(i).setconnected(true);
+        nodes.get(i).setconnectedto(nodes.get(_edges));
+    }
+}
+System.out.println("Proceso conexion finalizado.");
+
 
 
     }
 
     public boolean checkconnection(int vertices, int edges){
         boolean connection = false;
-        for(int i=0; i<matrix[i].length;i++){
-            for(int j=0; j<matrix[j].length;j++){
-                if(matrix[i][j] == 1 && matrix[j][i] == 1){
+       
+                if(matrix[vertices][edges] == 1 && matrix[vertices][edges] == 1){
                     connection = true;
 
                 }
                 else connection = false;
 
-            }
-        }
+         
         return connection;
 
     }
