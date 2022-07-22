@@ -15,6 +15,7 @@ class Graph:
     def connect(self,vertix1,vertix2):
         self.matrix[vertix1][vertix2] = 1
         self.matrix[vertix2][vertix1] = 1
+        Node.Node.setconnectedto(vertix2)
         print(self.matrix)
 
 
@@ -23,12 +24,29 @@ class Graph:
         self.matrix[vertix2][vertix1] = 0
         print(self.matrix)
 
-        
+
+def run():
+    people = []
+    while True:
+        name = input('enter your name')
+        age = int(input("enter your age"))
+        people.append(1)
+        n1 = Node.Node(name,age)
+        if name == '' and age == 0:
+            break
 
 
-g1 = Graph(10,10)
-g1.creategraph()
-g1.connect(0,1)
+    
+
+    g1 = Graph(len(people),len(people))
+    g1.creategraph()
+    g1.connect(0,1)
+         
+
+
+if __name__ == "__main__":
+    run()
+
 
 
 
