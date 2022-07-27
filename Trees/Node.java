@@ -64,6 +64,30 @@ public class Node{
          
                      
      }
+     
+     public static void main(String[] args) {
+         Node raiz1 = new Node(3);
+         raiz1.left = new Node(6);
+         raiz1.right = new Node(1);
+         raiz1.left.right = new Node(2);
+         raiz1.right.left = new Node(0);
+         
+         
+         Node raiz2 = new Node(2);
+         raiz2.left = new Node(3);
+         raiz2.right = new Node(6);
+         raiz2.left.right = new Node(2);
+         raiz2.left.left = new Node(7);
+         
+         
+         
+          Node raiz3 = unirArboles(raiz1,raiz2);
+         
+         System.out.printf("El Arbol unido es:\n");
+          inorden(raiz3);
+     
+     }
+         
  
  
  }
